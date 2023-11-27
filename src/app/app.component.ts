@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'component_databinding_practice';
+  oddNumber: number[] = [];
+  evenNumber: number[] = [];
+  public onIntervalFired(firedno: number) {
+    if (firedno % 2) {
+      this.oddNumber.push(firedno);
+    } else {
+      this.evenNumber.push(firedno);
+    }
+
+  }
 }
